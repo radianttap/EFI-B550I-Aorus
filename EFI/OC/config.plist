@@ -16,19 +16,19 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>B550 CPU declaration wrapping</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-CPUR.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>CPU Power Management</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
 				<string>SSDT-PLUG.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>B550 support</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-CPUR.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
