@@ -72,11 +72,24 @@ Everything.
 
 #### Media & DRM
 
-This build is not using WhateverGreen and without it almost everything seem to work just fine: Netflix in Safari, iTunes, VideoProc options show everything hw-accelerated.
+This build is not using WhateverGreen and without it some media content seem to play just fine: Netflix in Safari, iTunes media, VideoProc options show everything hw-accelerated.
 
-Plex does not start up and TV+ content displays green screen. I suspect that adding WhateverGreen.kext and `unfairgva` as [device property for GFX0](https://forum.amd-osx.com/index.php?threads/fixing-green-screen-drm-on-bigsur-for-appletv-and-apple-music-streaming.1476/), would fix that too.
+Plex locks up the machine on startup. TV+ content shows green screen.
 
-It's not important to me for this build.
+Just loading WEG black-screens the boot process, soon after Apple logo appears. I don’t care about DRM on this build thus did not yet look into this.
+
+I suspect that adding WhateverGreen.kext and `unfairgva` as [device property for GPU](https://forum.amd-osx.com/index.php?threads/fixing-green-screen-drm-on-bigsur-for-appletv-and-apple-music-streaming.1476/), would fix that too but this machine would likely need some ACPI renaming, since GFX0 does not exists – it’s called VGA:
+
+```
+% ./gfxutil -f GFX0 
+DevicePath not found!
+
+% ./gfxutil -f VGA 
+09:00.0 1002:73bf /PCI0@0/GPP8@3,1/SWUS@0/SWDS@0/VGA@0 
+= PciRoot(0x0)/Pci(0x3,0x1)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)
+```
+
+I’ll deal with this when I get some free time.
 
 ### What’s not working
 
