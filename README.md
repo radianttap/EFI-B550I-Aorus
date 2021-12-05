@@ -1,10 +1,20 @@
 # Gigabyte B550I Aorus Pro AX + Ryzen 9 5900X + RX 6900 XT
 
 - OpenCore ver 0.7.5
-- Bug Sur 11.6.1
 - MacPro7,1
 
-Current hardware:
+![](media/sliger-s620.jpeg)
+![](media/radeon.jpeg)
+![](media/cb23.png)
+![](media/gb5-cpu.png)
+![](media/gb5-gpu-metal.png)
+![](media/unigine-heaven.png)
+
+Current macOS:
+
+- Bug Sur 11.6.1
+
+## Current hardware
 
 - AMD [Ryzen 9 5900X](https://www.amd.com/en/products/cpu/amd-ryzen-9-5900x) CPU
 - XPG [Levante 240](https://www.xpg.com/en/feature/644/) AIO
@@ -62,9 +72,9 @@ Everything.
 
 #### Media & DRM
 
-This build is not using WhateverGreen and without it almost everything seem to work just fine: Plex, Netflix in Safari, iTunes, VideoProc options show everything hw-accelerated.
+This build is not using WhateverGreen and without it almost everything seem to work just fine: Netflix in Safari, iTunes, VideoProc options show everything hw-accelerated.
 
-The only is playing TV+ content display green screen. I suspect that adding WhateverGreen.kext and `unfairgva` as [device property for GFX0](https://forum.amd-osx.com/index.php?threads/fixing-green-screen-drm-on-bigsur-for-appletv-and-apple-music-streaming.1476/), would fix that too.
+Plex does not start up and TV+ content displays green screen. I suspect that adding WhateverGreen.kext and `unfairgva` as [device property for GFX0](https://forum.amd-osx.com/index.php?threads/fixing-green-screen-drm-on-bigsur-for-appletv-and-apple-music-streaming.1476/), would fix that too.
 
 It's not important to me for this build.
 
