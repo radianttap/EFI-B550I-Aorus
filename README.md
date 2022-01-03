@@ -20,7 +20,7 @@ Current macOS:
 - AMD [Ryzen 9 5900X](https://www.amd.com/en/products/cpu/amd-ryzen-9-5900x) CPU
 - XPG [Levante 240](https://www.xpg.com/en/feature/644/) AIO
 - AMD [RX 6900 XT](https://www.amd.com/en/products/graphics/amd-radeon-rx-6900-xt) graphics card
-- Corsair [Vengeance LPX](https://www.corsair.com/ww/en/Categories/Products/Memory/VENGEANCE-LPX/p/CMK32GX4M2B3200C16) 32 GB (2 x 16 GB) DDR4 3200MHz CL16
+- Corsair [Vengeance LPX](https://www.corsair.com/us/en/Categories/Products/Memory/VENGEANCE-LPX/p/CMK32GX4M2D3600C18) 32 GB (2 x 16 GB) DDR4 3600MHz CL16
 - ADATA [XPG 8200 Pro](https://www.xpg.com/us/feature/583/) 1TB NVMe SSD
 - Samsung [860 EVO](https://www.samsung.com/us/computing/memory-storage/solid-state-drives/ssd-860-evo-2-5--sata-iii-500gb-mz-76e500b-am/) 500 GB 2.5in SSD
 - Corsair [SF750 Platinum](https://www.corsair.com/us/en/Categories/Products/Power-Supply-Units/Power-Supply-Units-Advanced/SF-Series/p/CP-9020186-NA) SFX PSU
@@ -59,7 +59,7 @@ Version F12
 Everything.
 
 - CPU Power Management.
-- NVMe and 2.5in SSD.
+- NVMe and 2.5in SATA SSD.
 - WiFi, Bluetooth, Ethernet.
 - All USB ports (without map, just with RHUB reset).
 - Radeon GPU is natively supported.
@@ -67,27 +67,7 @@ Everything.
 - Watch unlock, Handoff, iMessage, iCloud, Keychain, Xcode etc.
 - System Integrity Protection (SIP) fully enabled.
 - Sleep / Wake.
-
-#### Media & DRM
-
-This build is not using WhateverGreen and without it some media content seem to play just fine: Netflix in Safari, iTunes media, VideoProc options show everything hw-accelerated.
-
-Plex locks up the machine on startup. TV+ content shows green screen.
-
-Just loading WEG black-screens the boot process, soon after Apple logo appears. I don’t care about DRM on this build thus did not yet look into this.
-
-I suspect that adding WhateverGreen.kext and `unfairgva` as [device property for GPU](https://forum.amd-osx.com/index.php?threads/fixing-green-screen-drm-on-bigsur-for-appletv-and-apple-music-streaming.1476/), would fix that too but this machine would likely need some ACPI renaming, since GFX0 does not exists – it’s called VGA:
-
-```
-% ./gfxutil -f GFX0 
-DevicePath not found!
-
-% ./gfxutil -f VGA 
-09:00.0 1002:73bf /PCI0@0/GPP8@3,1/SWUS@0/SWDS@0/VGA@0 
-= PciRoot(0x0)/Pci(0x3,0x1)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)
-```
-
-I’ll deal with this when I get some free time.
+- All media & DRM
 
 ### What’s not working
 
