@@ -1297,7 +1297,7 @@
 				Rg==
 				</data>
 				<key>boot-args</key>
-				<string>keepsyms=1 agdpmod=ignore brcmfx-driver=2 brcmfx-country=RS</string>
+				<string>keepsyms=1 agdpmod=pikera brcmfx-driver=2 brcmfx-country=RS</string>
 				<key>csr-active-config</key>
 				<data>
 				AAAAAA==
