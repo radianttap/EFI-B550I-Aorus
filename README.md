@@ -1,6 +1,6 @@
 # Gigabyte B550I Aorus Pro AX + Ryzen 9 5900X + RX 6900 XT
 
-- OpenCore ver 0.7.5
+- OpenCore ver 0.7.7
 - MacPro7,1
 
 ![](media/sliger-s620.jpeg)
@@ -12,7 +12,7 @@
 
 Current macOS:
 
-- Bug Sur 11.6.1
+- Bug Sur 11.6.3
 
 ## Current hardware
 
