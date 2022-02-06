@@ -10,9 +10,13 @@
 ![](media/gb5-gpu-metal.png)
 ![](media/unigine-heaven.png)
 
-Current macOS:
+Directly tested macOS:
 
 - Bug Sur 11.6.3
+- Monterey 12.2
+
+I upgraded from said Big Sur to Monterey 12.2 through System Prefs panel, as you would any other Mac. Worked beautifully and seemed quicker than going from Catalina to Big Sur.
+
 
 ## Current hardware
 
