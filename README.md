@@ -1,7 +1,12 @@
 # Gigabyte B550I Aorus Pro AX + Ryzen 9 5900X + RX 6900 XT
 
-- OpenCore ver 0.7.7
+- OpenCore ver 0.7.9
 - MacPro7,1
+- Monterey 12.2.1
+
+## Current hardware
+
+Powerful and near-silent even under full CPU load.
 
 ![](media/sliger-s620.jpeg)
 ![](media/radeon.jpeg)
@@ -10,25 +15,16 @@
 ![](media/gb5-gpu-metal.png)
 ![](media/unigine-heaven.png)
 
-Directly tested macOS:
-
-- Bug Sur 11.6.3
-- Monterey 12.2
-
-I upgraded from said Big Sur to Monterey 12.2 through System Prefs panel, as you would any other Mac. Worked beautifully and seemed quicker than going from Catalina to Big Sur.
-
-
-## Current hardware
-
 - [Gigabyte B550I Aorus Pro AX](https://www.gigabyte.com/Motherboard/B550I-AORUS-PRO-AX-rev-10/) motherboard (rev 1.0)
 - AMD [Ryzen 9 5900X](https://www.amd.com/en/products/cpu/amd-ryzen-9-5900x) CPU
-- XPG [Levante 240](https://www.xpg.com/en/feature/644/) AIO
-- AMD [RX 6900 XT](https://www.amd.com/en/products/graphics/amd-radeon-rx-6900-xt) graphics card
+- XPG [Levante 240](https://www.xpg.com/en/feature/644/) AIO with 2 Noctua [NF-A12x25](https://noctua.at/en/products/fan/nf-a12x25-pwm) fans set as intake.
+- AMD [RX 6900 XT](https://www.amd.com/en/products/graphics/amd-radeon-rx-6900-xt) graphics card, no riser card.
 - Corsair [Vengeance LPX](https://www.corsair.com/us/en/Categories/Products/Memory/VENGEANCE-LPX/p/CMK32GX4M2D3600C18) 32 GB (2 x 16 GB) DDR4 3600MHz CL16
 - ADATA [XPG 8200 Pro](https://www.xpg.com/us/feature/583/) 1TB NVMe SSD
 - Samsung [860 EVO](https://www.samsung.com/us/computing/memory-storage/solid-state-drives/ssd-860-evo-2-5--sata-iii-500gb-mz-76e500b-am/) 500 GB 2.5in SSD
 - Corsair [SF750 Platinum](https://www.corsair.com/us/en/Categories/Products/Power-Supply-Units/Power-Supply-Units-Advanced/SF-Series/p/CP-9020186-NA) SFX PSU
-- Noctua [NF-A12x25](https://noctua.at/en/products/fan/nf-a12x25-pwm) case fan
+- Noctua [NF-A12x25](https://noctua.at/en/products/fan/nf-a12x25-pwm) case fan as the back exhaust 
+- Noctua [NF-A12x15](https://noctua.at/en/products/fan/nf-a12x15-pwm) case fan as the top exhaust
 - Sliger [S620](https://sliger.com/products/cases/s620/) SFF case
 
 ### WiFI / Bt
@@ -38,7 +34,7 @@ The combo below offers natively supported WiFi 5 / Bluetooth 4.
 - 1750Mbps Dual Band WiFi 2.4GHz/5GHz / Bluetooth 4.0 [Broadcom BCM94360CD](https://www.aliexpress.com/item/1750Mbps-Dual-Band-WiFi-Bluetooth-Card-2-4GHz-5GHz-BT-4-0-Broadcom-BCM94360CD-Wireless-Module/32974196141.html) card
 - Mini [PCIe riser with adapter](https://www.aliexpress.com/item/BCM94360CD-BCM94360CS2-BCM943224PCIEBT2-Card-To-M-2-Key-A-E-Cable-For-Mac-OS-and-and/4000286967003.html) for M.2 Key A/E
 
-Combined with this riser cable, the card/adapter combo from above can be moved outside the motherboard I/O shroud, instead of existing Intel AX200 card.
+Combined with this riser cable, the card/adapter combo from above can be moved outside the motherboard I/O shroud, instead of existing Intel card.
 
 ### BIOS
 
@@ -50,6 +46,7 @@ Version F12
 - Resizable Bar Support: `Enabled`
 - PCIe slot speed: `Auto`
 - XMP Profile activated
+- PBO2 set to Enabled, nothing custom set.
 
 ## Usage
 
