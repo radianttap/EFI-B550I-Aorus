@@ -2,7 +2,7 @@
 
 - OpenCore ver 0.7.9
 - MacPro7,1
-- Monterey 12.2.1
+- Monterey 12.3.1
 
 ## Current hardware
 
