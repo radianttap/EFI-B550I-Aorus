@@ -1,8 +1,8 @@
 # Gigabyte B550I Aorus Pro AX + Ryzen 9 5900X + RX 6900 XT
 
-- OpenCore ver 0.7.9
+- OpenCore ver 0.8.3
 - MacPro7,1
-- Monterey 12.4
+- Monterey 12.5
 
 ## Current hardware
 
