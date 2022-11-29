@@ -1,8 +1,10 @@
 # Gigabyte B550I Aorus Pro AX + Ryzen 9 5900X + RX 6900 XT
 
-- OpenCore ver 0.8.3
+- OpenCore ver 0.8.6
 - MacPro7,1
-- Monterey 12.5
+- Monterey 12.6.1
+
+Ventura likely works too but I don’t use it yet.
 
 ## Current hardware
 
@@ -19,7 +21,7 @@ Powerful and near-silent even under full CPU load.
 - AMD [Ryzen 9 5900X](https://www.amd.com/en/products/cpu/amd-ryzen-9-5900x) CPU
 - XPG [Levante 240](https://www.xpg.com/en/feature/644/) AIO with 2 Noctua [NF-A12x25](https://noctua.at/en/products/fan/nf-a12x25-pwm) fans set as intake.
 - AMD [RX 6900 XT](https://www.amd.com/en/products/graphics/amd-radeon-rx-6900-xt) graphics card, no riser card.
-- Corsair [Vengeance LPX](https://www.corsair.com/us/en/Categories/Products/Memory/VENGEANCE-LPX/p/CMK32GX4M2D3600C18) 32 GB (2 x 16 GB) DDR4 3600MHz CL16
+- Corsair [Vengeance LPX](https://www.corsair.com/us/en/Categories/Products/Memory/VENGEANCE-LPX/p/CMK32GX4M2D3600C18) 32 GB (2 x 16 GB) DDR4 3600MHz CL18
 - ADATA [XPG 8200 Pro](https://www.xpg.com/us/feature/583/) 1TB NVMe SSD
 - Samsung [860 EVO](https://www.samsung.com/us/computing/memory-storage/solid-state-drives/ssd-860-evo-2-5--sata-iii-500gb-mz-76e500b-am/) 500 GB 2.5in SSD
 - Corsair [SF750 Platinum](https://www.corsair.com/us/en/Categories/Products/Power-Supply-Units/Power-Supply-Units-Advanced/SF-Series/p/CP-9020186-NA) SFX PSU
@@ -29,16 +31,11 @@ Powerful and near-silent even under full CPU load.
 
 ### WiFI / Bt
 
-The combo below offers natively supported WiFi 5 / Bluetooth 4.
-
-- 1750Mbps Dual Band WiFi 2.4GHz/5GHz / Bluetooth 4.0 [Broadcom BCM94360CD](https://www.aliexpress.com/item/1750Mbps-Dual-Band-WiFi-Bluetooth-Card-2-4GHz-5GHz-BT-4-0-Broadcom-BCM94360CD-Wireless-Module/32974196141.html) card
-- Mini [PCIe riser with adapter](https://www.aliexpress.com/item/BCM94360CD-BCM94360CS2-BCM943224PCIEBT2-Card-To-M-2-Key-A-E-Cable-For-Mac-OS-and-and/4000286967003.html) for M.2 Key A/E
-
-Combined with this riser cable, the card/adapter combo from above can be moved outside the motherboard I/O shroud, instead of existing Intel card.
+[Broadcom BCM94360NG](https://www.aliexpress.com/item/1005003324812245.html) card, direct replacement for the existing card on the board.
 
 ### BIOS
 
-Version F12
+Version `F16e`
 
 - Fast Boot: `Disabled`
 - CSM: `Disabled`
@@ -57,8 +54,6 @@ Version F12
 
 ### What’s working
 
-Everything.
-
 - CPU Power Management.
 - NVMe and 2.5in SATA SSD.
 - WiFi, Bluetooth, Ethernet.
@@ -67,24 +62,29 @@ Everything.
 - 4K HDMI or DisplayPort with HDR.
 - Watch unlock, Handoff, iMessage, iCloud, Keychain, Xcode etc.
 - System Integrity Protection (SIP) fully enabled.
-- Sleep / Wake.
 - All media & DRM
 
 ### What’s not working
 
 Sidecar most likely. Did not even try it but I suspect it does not work.
 
+Sleep is not working post-F12 BIOS versions but might start working with proper USB mapping. Not that much of an issue for me.
+
 ## Notes
 
-Use at your own risk. 
-
-- All `.efi` drivers and `.kext` are `-RELEASE` builds from the respective packages. 
 - OpenCanopy (GUI boot menu) is up and running.
-- I don’t boot Windows 10 using OC, thus I can’t guarantee it will work. I have Win 10 installed on separate SSD and switch using Boot Menu.
+- I don’t boot Windows 10/11 using OC, thus I can’t guarantee it will work. I have Windows installed on separate SSD and switch using Boot Menu.
 
-**Don’t ask me for help.** Sorry but this stuff is finicky and infuriatingly detailed that every little mis-step can be a proper headache. This is why [Dortania](https://dortania.github.io) advises to not reuse anyone’s EFI.  
+## Usage
 
-Ask [on reddit](https://www.reddit.com/r/hackintosh/) and the [discord server](https://discord.gg/Wxam8aH).
+*Use at your own risk.* Nothing is guaranteed, even if you use exactly the same hardware as me.
+
+You may use this EFI as example but be prepared to dive way deeper then you hoped. It’s always advisable to build your own EFI from scratch, [following the guide](https://dortania.github.io/OpenCore-Install-Guide/) —  then you’ll have an idea how things work,  how to ask for help in proper channels:
+- [on Reddit](https://www.reddit.com/r/hackintosh/)
+- [Discord server](https://discord.gg/Wxam8aH)
+- AMD-OSX [forums](https://forum.amd-osx.com)
+
+Most importantly — doing stuff step by step will give you knowledge how to act on given help and hints.
 
 Good luck.
 
