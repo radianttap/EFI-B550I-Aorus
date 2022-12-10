@@ -50,7 +50,7 @@
 				<key>Comment</key>
 				<string>B550I Aorus AX Sleep / Wake fix 1</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-GPRW.aml</string>
 			</dict>
@@ -58,9 +58,17 @@
 				<key>Comment</key>
 				<string>B550I Aorus AX Sleep / Wake fix 2</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-PRW0.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>B550I Aorus AX Sleep / Wake fix 3</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-Disabler.aml</string>
 			</dict>
 		</array>
 		<key>Delete</key>
