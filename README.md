@@ -63,12 +63,13 @@ Version `F16e`
 - Watch unlock, Handoff, iMessage, iCloud, Keychain, Xcode etc.
 - System Integrity Protection (SIP) fully enabled.
 - All media & DRM
+- Sleep / Wake
+
+Note: on sleep, external USB devices are forcefully ejected. Not ideal but simple physical re-connect solves it.
 
 ### What’s not working
 
 Sidecar most likely. Did not even try it but I suspect it does not work.
-
-Sleep is not working post-F12 BIOS versions but might start working with proper USB mapping. Not that much of an issue for me.
 
 ## Notes
 
