@@ -48,23 +48,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>B550I Aorus AX Sleep / Wake fix 1</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-GPRW.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>B550I Aorus AX Sleep / Wake fix 2</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-PRW0.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>B550I Aorus AX Sleep / Wake fix 3</string>
+				<string>B550I Aorus AX F16e Instant-Wake workaround</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -153,44 +137,6 @@
 				<key>TableSignature</key>
 				<data>
 				AAAAAA==
-				</data>
-			</dict>
-			<dict>
-				<key>Base</key>
-				<string></string>
-				<key>BaseSkip</key>
-				<integer>0</integer>
-				<key>Comment</key>
-				<string>Change GPRW to XPRW</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				R1BSVwI=
-				</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>OemTableId</key>
-				<data>
-				</data>
-				<key>Replace</key>
-				<data>
-				WFBSVwI=
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data>
 				</data>
 			</dict>
 		</array>
