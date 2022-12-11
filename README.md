@@ -1,6 +1,6 @@
 # Gigabyte B550I Aorus Pro AX + Ryzen 9 5900X + RX 6900 XT
 
-- OpenCore ver 0.8.6
+- OpenCore ver 0.8.7
 - MacPro7,1
 - Monterey 12.6.1
 
@@ -80,7 +80,7 @@ Sidecar most likely. Did not even try it but I suspect it does not work.
 
 *Use at your own risk.* Nothing is guaranteed, even if you use exactly the same hardware as me.
 
-You may use this EFI as example but be prepared to dive way deeper then you hoped. It’s always advisable to build your own EFI from scratch, [following the guide](https://dortania.github.io/OpenCore-Install-Guide/) —  then you’ll have an idea how things work,  how to ask for help in proper channels:
+You may use this EFI as example but be prepared to dive way deeper than you hoped. It’s always advisable to build your own EFI from scratch, [following the guide](https://dortania.github.io/OpenCore-Install-Guide/) —  then you’ll have an idea how things work,  how to ask for help in proper channels:
 - [on Reddit](https://www.reddit.com/r/hackintosh/)
 - [Discord server](https://discord.gg/Wxam8aH)
 - AMD-OSX [forums](https://forum.amd-osx.com)
