@@ -76,7 +76,7 @@ Sidecar most likely. Did not even try it but I suspect it does not work.
 - OpenCanopy (GUI boot menu) is up and running.
 - I don’t boot Windows 10/11 using OC, thus I can’t guarantee it will work. I have Windows installed on separate SSD and switch using Boot Menu.
 
-## Usage
+---
 
 *Use at your own risk.* Nothing is guaranteed, even if you use exactly the same hardware as me.
 
