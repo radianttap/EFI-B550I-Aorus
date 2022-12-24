@@ -435,11 +435,29 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
-				<string>UTBMap.kext</string>
+				<string>UTBMap-no-headers.kext</string>
 				<key>Comment</key>
-				<string>V1.1 | USB map B550I Aorus AX</string>
+				<string>B550I Aorus AX, no onboard USB headers connected</string>
 				<key>Enabled</key>
 				<true/>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>UTBMap-all-headers.kext</string>
+				<key>Comment</key>
+				<string>B550I Aorus AX, F_U32 and F_USB1 headers connected</string>
+				<key>Enabled</key>
+				<false/>
 				<key>ExecutablePath</key>
 				<string></string>
 				<key>MaxKernel</key>
