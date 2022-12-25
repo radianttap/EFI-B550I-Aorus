@@ -1,37 +1,22 @@
-# Gigabyte B550I Aorus Pro AX + Ryzen 9 5900X + RX 6900 XT
+# Gigabyte B550I Aorus Pro AX + Ryzen 5x00 + Radeon 6x00
 
 - OpenCore ver 0.8.7
 - MacPro7,1
-- Monterey 12.6.1
-
-Ventura likely works too but I don’t use it yet.
+- Monterey 12.6.2
 
 ## Current hardware
 
-Powerful and near-silent even under full CPU load.
-
-![](media/sliger-s620.jpeg)
-![](media/radeon.jpeg)
-![](media/cb23.png)
-![](media/gb5-cpu.png)
-![](media/gb5-gpu-metal.png)
-![](media/unigine-heaven.png)
-
 - [Gigabyte B550I Aorus Pro AX](https://www.gigabyte.com/Motherboard/B550I-AORUS-PRO-AX-rev-10/) motherboard (rev 1.0)
 - AMD [Ryzen 9 5900X](https://www.amd.com/en/products/cpu/amd-ryzen-9-5900x) CPU
-- XPG [Levante 240](https://www.xpg.com/en/feature/644/) AIO with 2 Noctua [NF-A12x25](https://noctua.at/en/products/fan/nf-a12x25-pwm) fans set as intake.
-- AMD [RX 6900 XT](https://www.amd.com/en/products/graphics/amd-radeon-rx-6900-xt) graphics card, no riser card.
+- AMD [RX 6800 XT](https://www.amd.com/en/products/graphics/amd-radeon-rx-6900-xt) graphics card, no riser card.
 - Corsair [Vengeance LPX](https://www.corsair.com/us/en/Categories/Products/Memory/VENGEANCE-LPX/p/CMK32GX4M2D3600C18) 32 GB (2 x 16 GB) DDR4 3600MHz CL18
-- ADATA [XPG 8200 Pro](https://www.xpg.com/us/feature/583/) 1TB NVMe SSD
-- Samsung [860 EVO](https://www.samsung.com/us/computing/memory-storage/solid-state-drives/ssd-860-evo-2-5--sata-iii-500gb-mz-76e500b-am/) 500 GB 2.5in SSD
-- Corsair [SF750 Platinum](https://www.corsair.com/us/en/Categories/Products/Power-Supply-Units/Power-Supply-Units-Advanced/SF-Series/p/CP-9020186-NA) SFX PSU
-- Noctua [NF-A12x25](https://noctua.at/en/products/fan/nf-a12x25-pwm) case fan as the back exhaust 
-- Noctua [NF-A12x15](https://noctua.at/en/products/fan/nf-a12x15-pwm) case fan as the top exhaust
-- Sliger [S620](https://sliger.com/products/cases/s620/) SFF case
+- WD [Black SN850X](https://www.westerndigital.com/en-il/products/internal-drives/wd-black-sn850x-nvme-ssd#WDS200T2X0E) 2TB NVMe SSD
+- WD [Black SN770](https://www.westerndigital.com/en-il/products/internal-drives/wd-black-sn770-nvme-ssd#WDS100T3X0E) 1TB NVMe SSD
+- [Broadcom BCM94360NG](https://www.aliexpress.com/item/1005003324812245.html) card, direct replacement for the existing card on the board.
 
-### WiFI / Bt
+Note: it’s fairly easy to switch between Ryzen 5000 CPUs, just carefully update the `Replace` value in first 3 `Kernel/Patch` entries, as [per AMD OSX Vanilla repo](https://github.com/AMD-OSX/AMD_Vanilla).
 
-[Broadcom BCM94360NG](https://www.aliexpress.com/item/1005003324812245.html) card, direct replacement for the existing card on the board.
+You can use any of these cards: Radeon 6600 XT, 6800, 6800 XT, 6900 XT — all are natively supported.
 
 ### BIOS
 
@@ -43,33 +28,18 @@ Version `F16e`
 - Resizable Bar Support: `Enabled`
 - PCIe slot speed: `Auto`
 - XMP Profile activated
-- PBO2 set to Enabled, nothing custom set.
 
 ## Usage
 
 1. [Update `PlatformInfo/Generic` stuff](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html#generate-a-new-serial) with your own, inside `config.plist`
 2. Use your Ethernet’s MAC address for `ROM` value, as explained in the Dortania guide. Don’t leave it as all 0s.
-3. Update value of `brcmfx-country` argument in `NVRAM/7C436110-AB2A-4BBB-A880-FE41995C9F82/boot-args` with your country code. Should be identical or compatible with what your WiFi router is broadcasting. (Remove the parameter if you don’t know what I’m talking about here.)
-4. Turn off Power Nap in Energy Saver.
+3. There are two USB maps - one without any onboard USB headers connected (no chassis ports) and one with all headers connected giving additional 2 USB-A 3.0 ports and 2 USB-A 2.0 ports. The former one is enabled in _config.plist_
 
-### What’s working
+## Status
 
-- CPU Power Management.
-- NVMe and 2.5in SATA SSD.
-- WiFi, Bluetooth, Ethernet.
-- All USB ports (without map, just with RHUB reset).
-- Radeon GPU is natively supported.
-- 4K HDMI or DisplayPort with HDR.
-- Watch unlock, Handoff, iMessage, iCloud, Keychain, Xcode etc.
-- System Integrity Protection (SIP) fully enabled.
-- All media & DRM
-- Sleep / Wake
+Almost *everything* works, except the usual AMD caveats.
 
-Note: on sleep, external USB devices are forcefully ejected. Not ideal but simple physical re-connect solves it.
-
-### What’s not working
-
-Sidecar most likely. Did not even try it but I suspect it does not work.
+On boot, some of the chassis fans may stop spinning when macOS login window shows up. Its RPM readings fail in AMD Power Gadget shows 0. Sometimes it's fixed upon waking up from sleep. It's head-scratcher why it happens.
 
 ## Notes
 
