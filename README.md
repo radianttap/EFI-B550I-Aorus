@@ -1,8 +1,11 @@
-# Gigabyte B550I Aorus Pro AX + Ryzen 5x00 + Radeon 6x00
+# Gigabyte B550I Aorus Pro AX\
+Ryzen 5x00\
+Radeon 6x00
 
-- OpenCore ver 0.8.7
+- OpenCore ver 0.9.0
 - MacPro7,1
-- Monterey 12.6.2
+- Monterey 12.6.4
+- Ventura 13.3
 
 ## Current hardware
 
@@ -38,8 +41,6 @@ Version `F16e`
 ## Status
 
 Almost *everything* works, except the usual AMD caveats.
-
-On boot, some of the chassis fans may stop spinning when macOS login window shows up. Its RPM readings fail in AMD Power Gadget shows 0. Sometimes it's fixed upon waking up from sleep. It's head-scratcher why it happens.
 
 ## Notes
 
