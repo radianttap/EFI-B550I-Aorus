@@ -381,7 +381,7 @@
 					<key>Arch</key>
 					<string>x86_64</string>
 					<key>BundlePath</key>
-					<string>IO80211FamilyLegacy.kext/Contents/MacOS/Plugins/AirPortBrcmNIC.kext</string>
+					<string>IO80211FamilyLegacy.kext/Contents/Plugins/AirPortBrcmNIC.kext</string>
 					<key>Comment</key>
 					<string>V1400.1.1 | ArPortBrcmNIC</string>
 					<key>Enabled</key>
