@@ -6,7 +6,12 @@
 macOS support status:
 
 - Ventura 13.6.1 running perfectly.
-- Sonoma 14.1 can be installed, Wi-Fi is not working.
+- Sonoma 14.1 running, Wi-Fi requires OCLP patching (see usage below)
+
+Note that Sonoma brings back [DSC support](https://www.cablematters.com/Blog/DisplayPort/what-is-display-stream-compression) over DisplayPort 1.4. Thus in Sonoma, for the first time since Big Sur, it’s possible to use variable refresh rate or 144Hz 10bit HDR which my LG 27GN950 monitor supports.
+
+![](media/gpu-144Hz-10bit-hdr.png)
+![](media/gpu-variable-refresh-rate.png)
 
 ## Current hardware
 
@@ -39,9 +44,17 @@ Version `F18c`
 2. Use your Ethernet’s MAC address for `ROM` value, as explained in the Dortania guide. Don’t leave it as all 0s.
 3. There are two USB maps - one without any onboard USB headers connected (no chassis ports) and one with all headers connected giving additional 2 USB-A 3.0 ports and 2 USB-A 2.0 ports. The former one is enabled in _config.plist_
 
-## Status
+### Sonoma only
 
-Almost *everything* works, except the usual AMD caveats.
+In Sonoma, Apple removed drivers for almost all slot-in Wi-Fi cards like the 94360NG I am using. Bluetooth is still working out of the box but Wi-Fi is not. 
+
+Per [this guide](https://github.com/5T33Z0/OC-Little-Translated/blob/main/14_OCLP_Wintel/WIiFi_Sonoma.md#2-config-and-efi-adjustments) and this [example .plist file](https://github.com/5T33Z0/OC-Little-Translated/blob/main/14_OCLP_Wintel/plist/Sonoma_WIFI_Modern.plist) I have added required kexts and updated config.plist to prepare ground for post-install patching.
+
+Thus SecureBootModel=`Disabled` (instead of `Default`) and `csr-active-config` is set to `03080000` which is specific value that enables:
+
+![](media/sip-03080000.png)
+
+Once you complete the installation with this, run [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/) and install _Modern Wireless_ patches from Post-Install Root Patches section. After that and install, your Wi-Fi will work again.
 
 ## Notes
 
