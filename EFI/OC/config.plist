@@ -1487,7 +1487,7 @@
 					<key>boot-args</key>
 					<string>keepsyms=1 agdpmod=pikera brcmfx-driver=2 brcmfx-country=RS</string>
 					<key>csr-active-config</key>
-					<data>AAAAAA==</data>
+					<data>AwgAAA==</data>
 					<key>run-efi-updater</key>
 					<string>No</string>
 				</dict>
@@ -1505,6 +1505,7 @@
 				<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 				<array>
 					<string>boot-args</string>
+					<string>csr-active-config</string>
 				</array>
 			</dict>
 			<key>LegacyOverwrite</key>
