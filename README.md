@@ -1,12 +1,12 @@
 # Gigabyte B550I Aorus Pro AX · Ryzen 5x00 · Radeon 6x00
 
-- OpenCore ver 0.9.6
+- OpenCore ver 0.9.7
 - MacPro7,1
 
 macOS support status:
 
-- Ventura 13.6.1 running perfectly.
-- Sonoma 14.1 can be installed, Wi-Fi is not working.
+- Ventura 13.6.3 running perfectly.
+- Sonoma 14.2 can be installed, Wi-Fi is not working with BCM94360NG card.
 
 ## Current hardware
 
