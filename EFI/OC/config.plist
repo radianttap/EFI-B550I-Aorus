@@ -158,19 +158,6 @@
 					<key>model</key>
 					<string>Wireless Network Adapter</string>
 				</dict>
-				<key>PciRoot(0x0)/Pci(0x8,0x1)/Pci(0x0,0x4)</key>
-				<dict>
-					<key>AAPL,slot-name</key>
-					<string>Built In</string>
-					<key>device_type</key>
-					<string>HD-Audio-Controller</string>
-					<key>layout-id</key>
-					<data>AQAAAA==</data>
-					<key>model</key>
-					<string>Realtek ALC1220-VB</string>
-					<key>name</key>
-					<string>HD Audio</string>
-				</dict>
 			</dict>
 			<key>Delete</key>
 			<dict/>
@@ -226,6 +213,24 @@
 					<true/>
 					<key>ExecutablePath</key>
 					<string></string>
+					<key>MaxKernel</key>
+					<string></string>
+					<key>MinKernel</key>
+					<string></string>
+					<key>PlistPath</key>
+					<string>Contents/Info.plist</string>
+				</dict>
+				<dict>
+					<key>Arch</key>
+					<string>x86_64</string>
+					<key>BundlePath</key>
+					<string>RestrictEvents.kext</string>
+					<key>Comment</key>
+					<string>V1.1.3 | CPU name patch</string>
+					<key>Enabled</key>
+					<true/>
+					<key>ExecutablePath</key>
+					<string>Contents/MacOS/RestrictEvents</string>
 					<key>MaxKernel</key>
 					<string></string>
 					<key>MinKernel</key>
@@ -345,9 +350,63 @@
 					<key>Arch</key>
 					<string>x86_64</string>
 					<key>BundlePath</key>
+					<string>USBToolBox.kext</string>
+					<key>Comment</key>
+					<string>V1.1.1 | USB toolbox</string>
+					<key>Enabled</key>
+					<true/>
+					<key>ExecutablePath</key>
+					<string>Contents/MacOS/USBToolBox</string>
+					<key>MaxKernel</key>
+					<string></string>
+					<key>MinKernel</key>
+					<string></string>
+					<key>PlistPath</key>
+					<string>Contents/Info.plist</string>
+				</dict>
+				<dict>
+					<key>Arch</key>
+					<string>x86_64</string>
+					<key>BundlePath</key>
+					<string>UTBMap-no-headers.kext</string>
+					<key>Comment</key>
+					<string>V1.1 | B550I Aorus AX, no onboard USB headers connected</string>
+					<key>Enabled</key>
+					<true/>
+					<key>ExecutablePath</key>
+					<string></string>
+					<key>MaxKernel</key>
+					<string></string>
+					<key>MinKernel</key>
+					<string></string>
+					<key>PlistPath</key>
+					<string>Contents/Info.plist</string>
+				</dict>
+				<dict>
+					<key>Arch</key>
+					<string>x86_64</string>
+					<key>BundlePath</key>
+					<string>UTBMap-all-headers.kext</string>
+					<key>Comment</key>
+					<string>V1.1 | B550I Aorus AX, F_U32 and F_USB1 headers connected</string>
+					<key>Enabled</key>
+					<false/>
+					<key>ExecutablePath</key>
+					<string></string>
+					<key>MaxKernel</key>
+					<string></string>
+					<key>MinKernel</key>
+					<string></string>
+					<key>PlistPath</key>
+					<string>Contents/Info.plist</string>
+				</dict>
+				<dict>
+					<key>Arch</key>
+					<string>x86_64</string>
+					<key>BundlePath</key>
 					<string>AppleALC.kext</string>
 					<key>Comment</key>
-					<string>V1.8.7 | Audio patches</string>
+					<string>V1.8.8 | Audio patches</string>
 					<key>Enabled</key>
 					<true/>
 					<key>ExecutablePath</key>
@@ -424,78 +483,6 @@
 					<true/>
 					<key>ExecutablePath</key>
 					<string>Contents/MacOS/SMCRadeonGPU</string>
-					<key>MaxKernel</key>
-					<string></string>
-					<key>MinKernel</key>
-					<string></string>
-					<key>PlistPath</key>
-					<string>Contents/Info.plist</string>
-				</dict>
-				<dict>
-					<key>Arch</key>
-					<string>x86_64</string>
-					<key>BundlePath</key>
-					<string>RestrictEvents.kext</string>
-					<key>Comment</key>
-					<string>V1.1.3 | CPU name patch</string>
-					<key>Enabled</key>
-					<true/>
-					<key>ExecutablePath</key>
-					<string>Contents/MacOS/RestrictEvents</string>
-					<key>MaxKernel</key>
-					<string></string>
-					<key>MinKernel</key>
-					<string></string>
-					<key>PlistPath</key>
-					<string>Contents/Info.plist</string>
-				</dict>
-				<dict>
-					<key>Arch</key>
-					<string>x86_64</string>
-					<key>BundlePath</key>
-					<string>USBToolBox.kext</string>
-					<key>Comment</key>
-					<string>V1.1.1 | USB toolbox</string>
-					<key>Enabled</key>
-					<true/>
-					<key>ExecutablePath</key>
-					<string>Contents/MacOS/USBToolBox</string>
-					<key>MaxKernel</key>
-					<string></string>
-					<key>MinKernel</key>
-					<string></string>
-					<key>PlistPath</key>
-					<string>Contents/Info.plist</string>
-				</dict>
-				<dict>
-					<key>Arch</key>
-					<string>x86_64</string>
-					<key>BundlePath</key>
-					<string>UTBMap-no-headers.kext</string>
-					<key>Comment</key>
-					<string>V1.1 | B550I Aorus AX, no onboard USB headers connected</string>
-					<key>Enabled</key>
-					<true/>
-					<key>ExecutablePath</key>
-					<string></string>
-					<key>MaxKernel</key>
-					<string></string>
-					<key>MinKernel</key>
-					<string></string>
-					<key>PlistPath</key>
-					<string>Contents/Info.plist</string>
-				</dict>
-				<dict>
-					<key>Arch</key>
-					<string>x86_64</string>
-					<key>BundlePath</key>
-					<string>UTBMap-all-headers.kext</string>
-					<key>Comment</key>
-					<string>V1.1 | B550I Aorus AX, F_U32 and F_USB1 headers connected</string>
-					<key>Enabled</key>
-					<false/>
-					<key>ExecutablePath</key>
-					<string></string>
 					<key>MaxKernel</key>
 					<string></string>
 					<key>MinKernel</key>
@@ -1432,7 +1419,7 @@
 					<key>SystemAudioVolume</key>
 					<data>Rg==</data>
 					<key>boot-args</key>
-					<string>keepsyms=1 agdpmod=pikera brcmfx-driver=2 brcmfx-country=RS</string>
+					<string>keepsyms=1 agdpmod=pikera alcid=3 alcverbs=1 brcmfx-driver=2 brcmfx-country=RS</string>
 					<key>csr-active-config</key>
 					<data>AAAAAA==</data>
 					<key>run-efi-updater</key>
